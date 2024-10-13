@@ -51,7 +51,9 @@ contact-manager/
 └── script.js          # JavaScript logic
 
 contacts.html: Contains the basic interface and form for contact management.
+
 styles.css: Defines the application's styling.
+
 script.js: Handles form submission, fetching the contact list, and updating and deleting contacts.
 ## Contributing
 Contributions to this project are welcome! Please follow these steps:
