@@ -43,6 +43,7 @@ Enter the contact's name, phone number, and email in the form, then click the �
 The contact will be added to the list. You can click the “Edit” button to update information or the “Delete” button to remove the contact.
 ## Code Structure
 contact-manager/
+
 ├── contacts.html         # Main HTML file
 
 ├── styles.css         # Stylesheet
