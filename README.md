@@ -43,12 +43,11 @@ Enter the contact's name, phone number, and email in the form, then click the �
 The contact will be added to the list. You can click the “Edit” button to update information or the “Delete” button to remove the contact.
 ## Code Structure
 contact-manager/
+├── contacts.html         # Main HTML file
 
-contacts.html         # Main HTML file
+├── styles.css         # Stylesheet
 
-styles.css         # Stylesheet
-
-script.js          # JavaScript logic
+└── script.js          # JavaScript logic
 
 contacts.html: Contains the basic interface and form for contact management.
 styles.css: Defines the application's styling.
