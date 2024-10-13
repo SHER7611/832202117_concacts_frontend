@@ -44,8 +44,11 @@ The contact will be added to the list. You can click the “Edit” button to up
 ## Code Structure
 contact-manager/
 contacts.html         # Main HTML file
+
 styles.css         # Stylesheet
+
 script.js          # JavaScript logic
+
 contacts.html: Contains the basic interface and form for contact management.
 styles.css: Defines the application's styling.
 script.js: Handles form submission, fetching the contact list, and updating and deleting contacts.
