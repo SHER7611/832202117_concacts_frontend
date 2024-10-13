@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 监听表单提交
+    // Listen for form submission
     document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const contactId = document.getElementById('contactId').value; // 获取 ID
+        const contactId = document.getElementById('contactId').value; // Get ID
         const contact = {
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
             email: document.getElementById('email').value
         };
 
-        const method = contactId ? 'PUT' : 'POST'; // 判断是更新还是添加
+        const method = contactId ? 'PUT' : 'POST'; // Determine if updating or adding
         const url = contactId ? `http://8.136.126.246:8080/contacts/${contactId}` : 'http://8.136.126.246:8080/contacts';
 
         fetch(url, {
@@ -27,17 +27,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                loadContacts(); // 重新加载联系人列表
-                // 清空输入框
+                loadContacts(); // Reload the contact list
+                // Clear the input fields
                 document.getElementById('contactForm').reset();
-                document.getElementById('contactId').value = ''; // 清空 ID
+                document.getElementById('contactId').value = ''; // Clear ID
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             });
     });
 
-    // 获取联系人列表
+    // Get contact list
     loadContacts();
 
     function loadContacts() {
@@ -45,22 +45,22 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(data => {
                 const contactList = document.getElementById('contactList');
-                contactList.innerHTML = ''; // 清空列表
+                contactList.innerHTML = ''; // Clear the list
                 data.forEach(contact => {
                     const contactItem = document.createElement('div');
                     contactItem.textContent = `${contact.name} - ${contact.phone} - ${contact.email}`;
 
-                    // 添加编辑按钮
+                    // Add edit button
                     const editButton = document.createElement('button');
-                    editButton.textContent = '编辑';
-                    editButton.classList.add('edit-button'); // 添加编辑按钮的类
+                    editButton.textContent = 'Edit';
+                    editButton.classList.add('edit-button'); // Add class for edit button
                     editButton.onclick = () => editContact(contact);
                     contactItem.appendChild(editButton);
 
-                    // 添加删除按钮
+                    // Add delete button
                     const deleteButton = document.createElement('button');
-                    deleteButton.textContent = '删除';
-                    deleteButton.classList.add('delete-button'); // 添加删除按钮的类
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.classList.add('delete-button'); // Add class for delete button
                     deleteButton.onclick = () => deleteContact(contact.id);
                     contactItem.appendChild(deleteButton);
 
@@ -72,15 +72,15 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // 编辑联系人
+    // Edit contact
     function editContact(contact) {
-        document.getElementById('contactId').value = contact.id; // 设置联系人 ID
+        document.getElementById('contactId').value = contact.id; // Set contact ID
         document.getElementById('name').value = contact.name;
         document.getElementById('phone').value = contact.phone;
         document.getElementById('email').value = contact.email;
     }
 
-    // 删除联系人
+    // Delete contact
     function deleteContact(id) {
         fetch(`http://8.136.126.246:8080/contacts/${id}`, {
             method: 'DELETE'
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
-                loadContacts(); // 重新加载联系人列表
+                loadContacts(); // Reload the contact list
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
