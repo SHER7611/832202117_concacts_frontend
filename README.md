@@ -1,36 +1,47 @@
-#Contact Management System
+# Contact Management System
 
 This is a simple contact management system that allows users to add, update, and delete contact information. Users can input contact names, phone numbers, and email addresses through a user-friendly interface and view all contacts in a list format.
 
-##Features
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Features
 
 - Add new contact information
 - Update existing contact information
 - Delete contacts
 - View a list of all contacts
 
-##Tech Stack
+## Tech Stack
 
 - **HTML**: For building the page structure
 - **CSS**: For styling and layout
 - **JavaScript**: For implementing front-end interactions and logic
 - **Spring Boot**: As the back-end service providing the API
 
-##Installation
+## Installation
 
-##Clone the Repository
+### Clone the Repository
 
-```bash
 git clone https://github.com/yourusername/contact-manager.git
 cd contact-manager
-Start the Back-End Service
+
+## Start the Back-End Service
 Make sure you have Java JDK 11 and Maven installed. Then run the following command in the back-end project directory:
 mvn spring-boot:run
-Usage
+## Usage
 Open your browser and navigate to http://localhost:8080.
 Enter the contact's name, phone number, and email in the form, then click the “Add/Update” button.
 The contact will be added to the list. You can click the “Edit” button to update information or the “Delete” button to remove the contact.
-Code Structure
+## Code Structure
 contact-manager/
 ├── contacts.html         # Main HTML file
 ├── styles.css         # Stylesheet
@@ -38,7 +49,7 @@ contact-manager/
 index.html: Contains the basic interface and form for contact management.
 styles.css: Defines the application's styling.
 script.js: Handles form submission, fetching the contact list, and updating and deleting contacts.
-Contributing
+## Contributing
 Contributions to this project are welcome! Please follow these steps:
 
 Fork the repository.
@@ -46,10 +57,10 @@ Create a new branch (git checkout -b feature-branch).
 Commit your changes (git commit -m 'Add new feature').
 Push to the branch (git push origin feature-branch).
 Submit a pull request.
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgements
+## Acknowledgements
 Thanks to the following resources for their support in this project:
 
 Spring Boot
