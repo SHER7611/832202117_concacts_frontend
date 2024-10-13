@@ -1,5 +1,7 @@
 # Code Style Guide
 
+> **Source:** This code style guide is based on [Google's JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html), [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript), and [W3C HTML & CSS standards](https://www.w3.org/standards/webdesign/).
+
 ## Languages Used
 - **HTML**: For building the page structure.
 - **CSS**: For styling and layout.
@@ -40,4 +42,5 @@
 ## Other Conventions
 - Maintain code readability by avoiding complex nesting.
 - Each file should contain only one main function or module to avoid becoming too large.
+
 
