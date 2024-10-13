@@ -1,35 +1,24 @@
-# Contact Management System
+#Contact Management System
 
 This is a simple contact management system that allows users to add, update, and delete contact information. Users can input contact names, phone numbers, and email addresses through a user-friendly interface and view all contacts in a list format.
 
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Code Structure](#code-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
-## Features
+##Features
 
 - Add new contact information
 - Update existing contact information
 - Delete contacts
 - View a list of all contacts
 
-## Tech Stack
+##Tech Stack
 
 - **HTML**: For building the page structure
 - **CSS**: For styling and layout
 - **JavaScript**: For implementing front-end interactions and logic
 - **Spring Boot**: As the back-end service providing the API
 
-## Installation
+##Installation
 
-### Clone the Repository
+##Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/contact-manager.git
